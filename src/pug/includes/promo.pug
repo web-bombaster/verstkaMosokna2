@@ -1,0 +1,28 @@
+.promo
+    .container.promo__container
+
+        .promo__block.promo-block
+
+            .promo-block__header.promo-header
+
+                picture.promo-header__img.promo-img
+                    source(srcset='img/content/promo/promo-mobile.jpg' media='(max-width: 480px)')
+                    source(srcset='img/content/promo/promo-tablet.jpg' media='(max-width: 768px)')
+                    source(srcset='img/content/promo/promo-notebook.jpg' media='(max-width: 992px)')
+                    img(src='img/content/promo/promo-pc.jpg' alt='Абстрактное изображение')
+
+
+                .promo-header__hbox.promo-hbox
+                    .promo-hbox__title.h2 Пластиковые окна<br> для загородных домов
+                    button.promo-hbox__btn.btn Заказать окна
+
+            .promo-block__adv.promo-adv
+                .promo-adv__item.promo-item
+                    img(src="img/content/promo/01.svg", alt="").promo-item__icon
+                    span.promo-item__title.caption-caps Новостройки<br> на этапе заселения
+                .promo-adv__item.promo-item
+                    img(src="img/content/promo/02.svg", alt="").promo-item__icon
+                    span.promo-item__title.caption-caps Вторичная<br> недвижимость
+
+            .promo-block__descr.promo-descr.p-big
+                p Пластиковые окна – красивое и практичное решение для загородного строительства. Ведь они долговечны, отлично выдерживают перепады температуры и влажности, могут быть самой различной формы, и имеют множество возможностей для декорирования. Мы предлагаем установку окон ПВХ в самые различные типы домов: кирпичные, каркасные, дома из бруса или блоков.

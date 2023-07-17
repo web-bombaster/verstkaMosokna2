@@ -1,0 +1,30 @@
+.location {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.location__city {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.location__city-icon {
+    height: 16px;
+    width: 16px;
+
+    margin-top: -2px;
+}
+
+.location__city-name {
+    @media (max-width: $break_sm) {
+        font-size: 12px;
+    }
+}
+
+.location__descr {
+    @media (max-width: $break_md) {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+}

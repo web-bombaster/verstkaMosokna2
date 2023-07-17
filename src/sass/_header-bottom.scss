@@ -1,0 +1,25 @@
+.header-bottom {
+    // padding-bottom: 20px;
+}
+.header-bottom__container {
+}
+.header-bottom__box {
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 880px) {
+        display: none;
+    }
+}
+.header-bottom__partner {
+    order: 2;
+    @media (max-width: $break_md) {
+        height: 15px;
+    }
+}
+.header-bottom__subsections {
+}
+

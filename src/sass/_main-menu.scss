@@ -1,0 +1,139 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+
+    margin-right: auto;
+
+    @media (max-width: 880px) {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+.main-menu__item {
+
+    @media (max-width: 880px) {
+        width: 100%;
+    }
+
+    .active {
+        background-color: var(--color-accent);
+        color: #fff;
+
+        @media (max-width: 880px) {
+            color: var(--color-accent);
+            background-color: transparent;
+        }
+
+    }
+}
+
+.main-menu__item-icon {
+    width: 16px;
+    height: 16px;
+
+    @media (max-width: 880px) {
+        .main-menu__link & {
+            display: none;
+        }
+    }
+}
+
+.main-menu__item-text {
+    font-family: 'Calibri';
+}
+
+.main-menu__link {
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 700;
+    line-height: 1.12;
+
+    border-radius: var(--brs);
+
+    @media (max-width: 880px) {
+        position: relative;
+        padding: 4px 0;
+
+        font-family: Calibri;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-accent);
+
+        background-color: transparent;
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 16px;
+            height: 16px;
+
+            background-size: cover;
+            background-image: url('../img/icons/down.svg');
+
+        }
+    }
+
+    &.toggle::after {
+        @media (max-width: 880px) {
+            background-image: url('../img/icons/up.svg');
+        }
+    }
+}
+
+.main-menu__link + .main-menu__submenu {
+    display: none;
+}
+
+.main-menu__link.toggle + .main-menu__submenu {
+    display: flex;
+}
+
+.main-menu__submenu {
+    display: none;
+
+    @media (max-width: 880px) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header-bottom & {
+        display: inline-flex;
+        gap: 12px;
+    }
+
+    .subsections__list {
+        display: none;
+    }
+}
+.main-menu__submenu-item {
+}
+.main-menu__submenu-link {
+    font-size: 18px;
+    font-weight: 700;
+
+    @media (max-width: 880px) {
+        font-size: 16px;
+        font-weight: 400;
+
+        &.active {
+            color: var(--color-text);
+        }
+    }
+
+    &.active {
+        color: var(--color-accent);
+    }
+}

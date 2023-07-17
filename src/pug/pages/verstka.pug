@@ -1,0 +1,16 @@
+mixin linkToPage(link, title)
+	p
+		a(href=link+".html" target="_blank") #{title}
+
+doctype html
+html(lang="ru-RU")
+	include ../includes/head
+	body
+		.container
+			h1 Верстка сайта «Мосокна»:
+			.index
+				p.info Если страничка отображается криво, обновляем ее через CTRL + F5!
+				+linkToPage('home','Пластиковые окна')
+				+linkToPage('window-system','Оконная система')
+				+linkToPage('balkony','Балконы')
+				+linkToPage('osteklenie','Стоимость остекления загородных домов')
